@@ -2,8 +2,6 @@ const fastify = require('fastify')
 
 const app = fastify({ logger: true })
 
-app.get('/', async () => {
-  return 'hello!'
-})
+app.register(require('./routes'))
 
 module.exports = app
