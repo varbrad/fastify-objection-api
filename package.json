@@ -1,0 +1,23 @@
+{
+  "name": "fastify-objection-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/varbrad/fastify-objection-api.git",
+  "author": "Brad Davies <varbrad@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "fastify": "^2.3.0",
+    "knex": "^0.17.0-next3",
+    "objection": "^1.6.9",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1"
+  }
+}
