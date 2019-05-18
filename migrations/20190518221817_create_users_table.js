@@ -8,10 +8,7 @@ exports.up = knex =>
       .string('username')
       .unique()
       .notNullable()
-    table
-      .string('email')
-      .unique()
-      .notNullable()
+    table.string('email').unique()
     table.string('password').notNullable()
     table.timestamps()
   })
