@@ -9,10 +9,13 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "fastify": "^2.3.0",
+    "fastify-objectionjs": "^0.1.2",
     "knex": "^0.17.0-next3",
     "objection": "^1.6.9",
-    "pg": "^7.11.0"
+    "pg": "^7.11.0",
+    "sqlite3": "^4.0.8"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

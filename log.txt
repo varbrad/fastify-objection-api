@@ -1,0 +1,23 @@
+{"level":30,"time":1558214121134,"pid":13300,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214121135,"pid":13300,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
+{"level":30,"time":1558214130769,"pid":10396,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214130770,"pid":10396,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
+{"level":30,"time":1558214143129,"pid":10396,"hostname":"BradW10","reqId":1,"req":{"method":"GET","url":"/api/person/1?include=parent","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":54691},"msg":"incoming request","v":1}
+{"level":50,"time":1558214143165,"pid":10396,"hostname":"BradW10","reqId":1,"req":{"method":"GET","url":"/api/person/1?include=parent","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":54691},"res":{"statusCode":500},"err":{"type":"Error","message":"Person not found","stack":"Error: Person not found\n    at Object.<anonymous> (D:\\Development\\fastify-objection-api\\routes\\person.js:16:24)"},"msg":"Person not found","v":1}
+{"level":30,"time":1558214143171,"pid":10396,"hostname":"BradW10","reqId":1,"res":{"statusCode":500},"responseTime":40.75039899349213,"msg":"request completed","v":1}
+{"level":30,"time":1558214148023,"pid":10396,"hostname":"BradW10","reqId":2,"req":{"method":"GET","url":"/api/person/1?include=parent","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":54691},"msg":"incoming request","v":1}
+{"level":50,"time":1558214148030,"pid":10396,"hostname":"BradW10","reqId":2,"req":{"method":"GET","url":"/api/person/1?include=parent","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":54691},"res":{"statusCode":500},"err":{"type":"Error","message":"Person not found","stack":"Error: Person not found\n    at Object.<anonymous> (D:\\Development\\fastify-objection-api\\routes\\person.js:16:24)"},"msg":"Person not found","v":1}
+{"level":30,"time":1558214148030,"pid":10396,"hostname":"BradW10","reqId":2,"res":{"statusCode":500},"responseTime":7.077099002897739,"msg":"request completed","v":1}
+{"level":30,"time":1558214210606,"pid":10396,"hostname":"BradW10","reqId":3,"req":{"method":"GET","url":"/api/person/1?include=parent","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":54703},"msg":"incoming request","v":1}
+{"level":50,"time":1558214210609,"pid":10396,"hostname":"BradW10","reqId":3,"req":{"method":"GET","url":"/api/person/1?include=parent","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":54703},"res":{"statusCode":500},"err":{"type":"Error","message":"Person not found","stack":"Error: Person not found\n    at Object.<anonymous> (D:\\Development\\fastify-objection-api\\routes\\person.js:16:24)"},"msg":"Person not found","v":1}
+{"level":30,"time":1558214210609,"pid":10396,"hostname":"BradW10","reqId":3,"res":{"statusCode":500},"responseTime":3.024098999798298,"msg":"request completed","v":1}
+{"level":30,"time":1558214298352,"pid":1756,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214298353,"pid":1756,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
+{"level":30,"time":1558214394308,"pid":16336,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214394308,"pid":16336,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
+{"level":30,"time":1558214580019,"pid":18328,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214580020,"pid":18328,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
+{"level":30,"time":1558214585030,"pid":16932,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214585030,"pid":16932,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
+{"level":30,"time":1558214713212,"pid":9184,"hostname":"BradW10","msg":"Server listening at http://127.0.0.1:3000","v":1}
+{"level":30,"time":1558214713212,"pid":9184,"hostname":"BradW10","msg":"Server listening at 127.0.0.1","v":1}
