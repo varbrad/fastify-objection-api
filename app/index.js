@@ -4,9 +4,7 @@ const app = fastify({ logger: { file: 'log.txt' } })
 
 require('../database')
 
-app.addHook('onRoute', options => {
-  console.log(options.method + ': ' + options.url)
-})
+require('../middleware')(app)
 
 app.register(require('../routes'))
 

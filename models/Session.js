@@ -1,10 +1,22 @@
 const { Model } = require('objection')
 const uuid = require('uuid/v4')
-// const UserSchema = require('../schema/UserSchema')
 
 class Session extends Model {
   static get tableName() {
     return 'sessions'
+  }
+
+  static get relationMappings() {
+    return {
+      user: {
+        relation: Model.BelongsToOneRelation,
+        modelClass: require('./User'),
+        join: {
+          from: 'sessions.userId',
+          to: 'user.id',
+        },
+      },
+    }
   }
 
   /**
@@ -20,18 +32,18 @@ class Session extends Model {
   /**
    * @param {import('fastify').FastifyRequest} request
    */
-  static async fromRequest(request) {
-    try {
-      const token = request.headers.authorization.match(/^Bearer (.*)/)[1]
-      if (!token) throw new Error()
-      const session = await Session.query()
-        .first()
-        .where({ token })
-      if (!session) throw new Error()
-      return session
-    } catch (err) {
-      throw new Error('Invalid session')
-    }
+  static async fromToken(token) {
+    if (!token) return null
+    const session = await Session.query()
+      .first()
+      .where({ token })
+    return session || null
+  }
+
+  async user() {
+    return await require('./User')
+      .query()
+      .findById(this.userId)
   }
 }
 

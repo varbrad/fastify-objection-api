@@ -1,11 +1,23 @@
 const PasswordModel = require('objection-password')()
 const { Model } = require('objection')
-const Session = require('./Session')
 const UserSchema = require('../schema/UserSchema')
 
 class User extends PasswordModel(Model) {
   static get tableName() {
     return 'users'
+  }
+
+  static get relationMappings() {
+    return {
+      sessions: {
+        relation: Model.HasManyRelation,
+        modelClass: require('./Session'),
+        join: {
+          from: 'users.id',
+          to: 'sessions.userId',
+        },
+      },
+    }
   }
 
   static async register({ username, password, email = null }) {
@@ -21,12 +33,17 @@ class User extends PasswordModel(Model) {
     if (!user) throw new Error('User not found')
     const validPassword = await user.verifyPassword(password)
     if (!validPassword) throw new Error('Invalid user/password combo')
-    const session = await Session.make(user)
-    return session
+    return await require('./Session').make(user)
   }
 
   static get jsonSchema() {
     return UserSchema.model
+  }
+
+  async sessions() {
+    return await require('./Session')
+      .query()
+      .where({ userId: this.id })
   }
 }
 
