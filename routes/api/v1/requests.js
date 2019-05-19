@@ -1,10 +1,4 @@
-const auth = (request, _, done) => {
-  if (!request.user) {
-    done(new Error('You must be authenticated to access this route'))
-  } else {
-    done()
-  }
-}
+const auth = require('../../../handlers/auth')
 
 /**
  * @param {import('fastify').FastifyInstance} app
