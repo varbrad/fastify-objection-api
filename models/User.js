@@ -1,5 +1,6 @@
 const PasswordModel = require('objection-password')()
 const { Model } = require('objection')
+const Session = require('./Session')
 const UserSchema = require('../schema/UserSchema')
 
 class User extends PasswordModel(Model) {
@@ -19,7 +20,9 @@ class User extends PasswordModel(Model) {
       .skipUndefined()
     if (!user) throw new Error('User not found')
     const validPassword = await user.verifyPassword(password)
-    return validPassword
+    if (!validPassword) throw new Error('Invalid user/password combo')
+    const session = await Session.make(user)
+    return session
   }
 
   static get jsonSchema() {

@@ -5,7 +5,6 @@ const UserSchema = require('../../../schema/UserSchema')
  * @param {import('../../../app')} app
  */
 module.exports = async app => {
-  app.get('/:user', UserController.show)
   app.post('/', { schema: UserSchema.store }, UserController.store)
   app.post('/login', { schema: UserSchema.login }, UserController.login)
 }

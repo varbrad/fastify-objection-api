@@ -10,7 +10,7 @@ exports.up = knex =>
       .notNullable()
     table.string('email').unique()
     table.string('password').notNullable()
-    table.timestamps()
+    table.timestamps(false, true)
   })
 
 /**
